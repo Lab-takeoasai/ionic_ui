@@ -7,8 +7,23 @@
       <button class="button icon ion-navicon" ng-click="toggleReorderButtons()"></button>
     </div>
 
-    <ion-list>
+    <div>
+      <p class="padding">/</p>
+      <code><pre>
+        &lt;ion-item ng-repeat="<span style="color:red;">item in items</span>"&gt;
+          {{item.title}｝
+          &lt;<span style="color:red;">ion-option-button</span> class="button-positive"&gt;
+            Share
+          &lt;<span style="color:red;">/ion-option-button</span>&gt;
+          &lt;ion-option-button class="button-assertive"&gt;
+            Edit
+          &lt;/ion-option-button&gt;
+          &lt;<span style="color:red;">ion-delete-button</span> class="ion-minus-circled" ng-click="deleteItem(item)"&gt;&lt;<span style="color:red;">/ion-delete-button</span>&gt;
+          &lt;<span style="color:red;">ion-reorder-button</span> class="ion-navicon" on-reorder="reorderItem(item, $fromIndex, $toIndex)"&gt;&lt;<span style="color:red;">/ion-reorder-button</span>&gt;
+        &lt;/ion-item&gt;</pre></code>
+    </div>
 
+    <ion-list>
       <ion-item ng-repeat="item in items">
         {{item.title}}
         <ion-option-button class="button-positive">
@@ -20,6 +35,5 @@
         <ion-delete-button class="ion-minus-circled" ng-click="deleteItem(item)"></ion-delete-button>
         <ion-reorder-button class="ion-navicon" on-reorder="reorderItem(item, $fromIndex, $toIndex)"></ion-reorder-button>
       </ion-item>
-
   </ion-content>
 </ion-view>
