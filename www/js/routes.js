@@ -37,19 +37,16 @@ angular.module('routes', ['ionic', 'starter.controllers'])
       }
     }
   })
-
-
-
-  
-
-  .state('app.search', {
-    url: '/search',
+  .state('app.activelists', {
+    url: '/activelists',
     views: {
       'menuContent': {
-        templateUrl: 'templates/search.html'
+        templateUrl: 'templates/lists/active.html',
+        controller: 'ActivelistsCtrl'
       }
     }
   })
+
 
 
     .state('app.playlists', {

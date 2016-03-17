@@ -1,0 +1,25 @@
+<ion-view view-title="Active Lists">
+  <ion-content>
+
+    <div class="bar bar-header bar-dark">
+      <button class="button icon ion-minus-circled" ng-click="toggleDeleteButtons()"></button>
+      <h1 class="title">Alt Header</h1>
+      <button class="button icon ion-navicon" ng-click="toggleReorderButtons()"></button>
+    </div>
+
+    <ion-list>
+
+      <ion-item ng-repeat="item in items">
+        {{item.title}}
+        <ion-option-button class="button-positive">
+          Share
+        </ion-option-button>
+        <ion-option-button class="button-assertive">
+          Edit
+        </ion-option-button>
+        <ion-delete-button class="ion-minus-circled" ng-click="deleteItem(item)"></ion-delete-button>
+        <ion-reorder-button class="ion-navicon" on-reorder="reorderItem(item, $fromIndex, $toIndex)"></ion-reorder-button>
+      </ion-item>
+
+  </ion-content>
+</ion-view>

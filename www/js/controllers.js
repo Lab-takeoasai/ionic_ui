@@ -23,5 +23,31 @@ angular.module('starter.controllers', [])
   ];
 })
 
+.controller('ActivelistsCtrl', function($scope, $ionicListDelegate) {
+  var items = [];
+  for (var i = 0; i < 25; i++) {
+    items.push({title: 'Item ' + String(i), id: i});
+  }
+  $scope.items = items;
+
+
+  // delete & reorder
+  var isDeleteHidden = true;
+  var isReorderHidden = true;
+  $scope.toggleReorderButtons = function() {
+    isReorderHidden = !$ionicListDelegate.showReorder(isReorderHidden);
+  };
+  $scope.reorderItem = function(item, fromIndex, toIndex) {
+    items.splice(fromIndex, 1);
+    items.splice((fromIndex < toIndex ? toIndex -1 : toIndex), 0, item);
+  };
+  $scope.toggleDeleteButtons = function() {
+    isDeleteHidden = !$ionicListDelegate.showDelete(isDeleteHidden);
+  };
+  $scope.deleteItem = function(item) {
+    items.splice(items.indexOf(item), 1);
+  };
+})
+
 .controller('PlaylistCtrl', function($scope, $stateParams) {
 });
