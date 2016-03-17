@@ -47,7 +47,15 @@ angular.module('routes', ['ionic', 'starter.controllers'])
     }
   })
 
-
+  // Card
+  .state('app.cards', {
+    url: '/cards',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/cards/index.html'
+      }
+    }
+  })
 
     .state('app.playlists', {
       url: '/playlists',
