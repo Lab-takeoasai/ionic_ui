@@ -1,0 +1,176 @@
+<ion-view view-title="Lists">
+  <ion-content>
+
+    <ion-list>
+
+      <ion-item class="item-divider">
+        Using the ionList and ionItem directives make it easy to support various interaction modes such as swipe to edit, drag to reorder, and removing items.
+      </ion-item>
+
+      <ion-item>
+        1st
+      </ion-item>
+      <ion-item>
+        <code><pre>
+          &lt;ion-item&gt;
+            1st
+          &lt;/ion-item&gt;</pre></code>
+      </ion-item>
+
+      <ion-item class="item-divider">
+        2nd
+      </ion-item>
+      <ion-item>
+        <code><pre>
+          &lt;ion-item class="item-divider"&gt;
+            2nd
+          &lt;/ion-item&gt;</pre></code>
+      </ion-item>
+
+      <ion-item class="item-icon-left">
+        <i class="icon ion-email"></i>
+        Check mail
+      </ion-item>
+      <ion-item>
+        <code><pre>
+          &lt;ion-item class="item-icon-left"&gt;
+            &lt;i class="icon ion-email"&gt;&lt;/i&gt;
+            Check mail
+          &lt;/ion-item&gt;</pre></code>
+      </ion-item>
+
+      <ion-item class="item-icon-left item-icon-right">
+        <i class="icon ion-chatbubble-working"></i>
+        Call Ma
+        <i class="icon ion-ios-telephone-outline"></i>
+      </ion-item>
+      <ion-item>
+        <code><pre>
+          &lt;ion-item class="item-icon-left item-icon-right"&gt;
+            &lt;i class="icon ion-chatbubble-working"&gt;&lt;/i&gt;
+            Call Ma
+            &lt;i class="icon ion-ios-telephone-outline"&gt;&lt;/i&gt;
+          &lt;/ion-item&gt;</pre></code>
+      </ion-item>
+
+      <ion-item class="item-icon-left">
+        <i class="icon ion-mic-a"></i>
+        Record
+        <span class="item-note">
+          Grammy
+        </span>
+      </ion-item>
+      <ion-item>
+        <code><pre>
+          &lt;ion-item class="item-icon-left"&gt;
+            &lt;i class="icon ion-mic-a"&gt;&lt;/i&gt;
+            Record
+            &lt;span class="item-note"&gt;
+              Grammy
+            &lt;/span&gt;
+          &lt;/ion-item&gt;</pre></code>
+      </ion-item>
+
+      <ion-item class="item-icon-left">
+        <i class="icon ion-person-stalker"></i>
+        Friends
+        <span class="badge badge-assertive">32</span>
+      </ion-item>
+      <ion-item>
+        <code><pre>
+          &lt;ion-item class="item-icon-left"&gt;
+            &lt;i class="icon ion-person-stalker"&gt;&lt;/i&gt;
+            Friends
+            &lt;span class="badge badge-assertive"&gt;32&lt;/span&gt;
+          &lt;/ion-item&gt;</pre></code>
+      </ion-item>
+
+      <ion-item class="item-icon-left item-button-right">
+        <i class="icon ion-ios-telephone"></i>
+        Call Ma
+        <button class="button button-positive">
+          <i class="icon ion-ios-telephone"></i>
+        </button>
+      </ion-item>
+      <ion-item>
+        <code><pre>
+          &lt;ion-item class="item-icon-left item-button-right"&gt;
+            &lt;i class="icon ion-ios-telephone">&lt;/i&gt;
+            Call Ma
+            &lt;button class="button button-positive"&gt;
+              &lt;i class="icon ion-ios-telephone"&gt;&lt;/i&gt;
+            &lt;/button&gt;
+          &lt;/ion-item&gt;</pre></code>
+      </ion-item>
+
+      <!-- Image Cells //-->
+      <ion-item class="item-divider">
+        Images
+      </ion-item>
+
+      <ion-item class="item-avatar">
+        <img src="../img/avatar0.jpg">
+        <h2>avatar0</h2>
+        I'm a scientist.
+      </ion-item>
+      <ion-item class="item-avatar">
+        <img src="../img/avatar1.png">
+        <h2>avatar1</h2>
+        this image is 641x720 px. avatar with left icon can destroy avatar size of images.
+      </ion-item>
+      <ion-item>
+        <code><pre>
+          &lt;ion-item class="item-avatar"&gt;
+            &lt;img src="../img/avatar0.jpg"&gt;
+            &lt;h2&gt;avatar0&lt;/h2&gt;
+            I'm a scientist.
+          &lt;/ion-item&gt;</pre></code>
+      </ion-item>
+
+      <ion-item class="item-avatar item-button-right">
+        <img src="../img/avatar2.png">
+        <h2>avatar2</h2>
+        right button is working.
+        <button class="button button-positive">
+          <i class="icon ion-ios-telephone"></i>
+        </button>
+      </ion-item>
+      <ion-item>
+        <code><pre>
+          &lt;ion-item class="item-avatar item-button-right"&gt;
+            &lt;img src="../img/avatar2.png"&gt;
+            &lt;h2>avatar2&lt;/h2&gt;
+            right button is working.
+            &lt;button class="button button-positive"&gt;
+              &lt;i class="icon ion-ios-telephone"&gt;&lt;/i&gt;
+            &lt;/button&gt;
+          &lt;/ion-item&gt;</pre></code>
+      </ion-item>
+
+      <ion-item class="item-thumbnail-left">
+        <img src="../img/avatar3.jpg">
+        <h2>Thumnail</h2>
+        <p>this is very loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooonng
+        text.</p>
+        <p>As it is, it doesn't wrap texts.</p>
+      </ion-item>
+      <ion-item>
+        <code><pre>
+          &lt;ion-item class="item-thumbnail-left"&gt;
+            &lt;img src="../img/avatar3.jpg"&gt;
+            &lt;h2&gt;Thumnail&lt;/h2&gt;
+            &lt;p>this is very loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooonng text.&lt;/p&gt;
+            &lt;p>As it is, it doesn't wrap texts.&lt;/p&gt;
+          &lt;/ion-item&gt;</pre></code>
+      </ion-item>
+
+      <ion-item class="item-thumbnail-right">
+        <img src="../img/avatar4.jpg">
+        <h2>Thumnail Right</h2>
+        right thumb is also avaviable.
+      </ion-item>
+
+    </ion-list>
+
+  </ion-content>
+</ion-view>

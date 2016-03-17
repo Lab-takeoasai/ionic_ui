@@ -18,6 +18,7 @@ angular.module('routes', ['ionic', 'starter.controllers'])
     }
   })
 
+  // Buttons
   .state('app.buttons', {
     url: '/buttons',
     views: {
@@ -26,6 +27,20 @@ angular.module('routes', ['ionic', 'starter.controllers'])
       }
     }
   })
+
+  // Lists
+  .state('app.lists', {
+    url: '/lists',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/lists/index.html'
+      }
+    }
+  })
+
+
+
+  
 
   .state('app.search', {
     url: '/search',
