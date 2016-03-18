@@ -57,6 +57,16 @@ angular.module('routes', ['ionic', 'starter.controllers'])
     }
   })
 
+  // Form
+  .state('app.forms', {
+    url: '/forms',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/forms/index.html'
+      }
+    }
+  })
+
     .state('app.playlists', {
       url: '/playlists',
       views: {

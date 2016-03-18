@@ -1,0 +1,174 @@
+<ion-view view-title="Forms">
+  <ion-content>
+
+    <div class="list">
+      <form ng-submit="">
+        <label class="item item-input">
+          <input type="text" placeholder="Name">
+        </label>
+        <label class="item item-input">
+          <textarea placeholder="Comments"></textarea>
+        </label>
+        <button type="submit" class="button button-calm button-block">create</button>
+      </form>
+      <pre><code>
+    &lt;div class=&quot;list&quot;&gt;
+      &lt;form ng-submit=&quot;function defined in controller&quot;&gt;
+        &lt;label class=&quot;item item-input&quot;&gt;
+          &lt;input type=&quot;text&quot; placeholder=&quot;Name&quot;&gt;
+        &lt;/label&gt;
+        &lt;label class=&quot;item item-input&quot;&gt;
+          &lt;textarea placeholder=&quot;Comments&quot;&gt;&lt;/textarea&gt;
+        &lt;/label&gt;
+        &lt;button type=&quot;submit&quot; class=&quot;button button-calm button-block&quot;&gt;create&lt;/button&gt;
+      &lt;/form&gt;
+    &lt;/div&gt;</code></pre>
+    </div>
+
+    <div class="list">
+      <label class="item item-input">
+        <span class="input-label">Username</span>
+        <input type="text">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Password</span>
+        <input type="password">
+      </label>
+    </div>
+
+
+    <div class="list">
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Name</span>
+        <input type="text" placeholder="John">
+      </label>
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Email</span>
+        <input type="email" placeholder="john@suhr.com">
+      </label>
+    </div>
+
+
+
+    <div class="list">
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Name</span>
+        <input type="text" placeholder="First Name">
+      </label>
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Tel</span>
+        <input type="tel" placeholder="Tel">
+      </label>
+    </div>
+
+    <div class="list list-inset">
+      <label class="item item-input">
+        <input type="text" placeholder="Name">
+      </label>
+      <label class="item item-input">
+        <input type="number" placeholder="Number">
+      </label>
+    </div>
+
+    <div class="list">
+      <div class="item item-input-inset">
+        <label class="item-input-wrapper">
+          <input type="email" placeholder="Email">
+        </label>
+        <button class="button button-small">Submit</button>
+      </div>
+
+    </div>
+
+
+
+
+
+
+    <div class="list list-inset">
+      <label class="item item-input">
+        <i class="icon ion-search placeholder-icon"></i>
+        <input type="text" placeholder="Search">
+      </label>
+    </div>
+
+
+
+
+
+
+
+    <label class="toggle">
+       <input type="checkbox">
+       <div class="track">
+         <div class="handle"></div>
+       </div>
+    </label>
+
+    <ul class="list">
+
+      <li class="item item-toggle">
+         HTML5
+         <label class="toggle toggle-assertive">
+           <input type="checkbox">
+           <div class="track">
+             <div class="handle"></div>
+           </div>
+         </label>
+      </li>
+
+    </ul>
+
+
+    <ion-list>
+      <ion-checkbox ng-model="filter.blue">Red</ion-checkbox>
+      <ion-checkbox ng-model="filter.yellow">Yellow</ion-checkbox>
+      <ion-checkbox ng-model="filter.pink">Pink</ion-checkbox>
+    </ion-list>
+
+    <ion-list>
+      <ion-radio ng-model="choice" ng-value="'A'">Choose A</ion-radio>
+      <ion-radio ng-model="choice" ng-value="'B'">Choose B</ion-radio>
+    </ion-list>
+
+    <div class="item range">
+      <i class="icon ion-volume-low"></i>
+      <input type="range" name="volume">
+      <i class="icon ion-volume-high"></i>
+    </div>
+
+    <div class="list">
+      <div class="item range range-positive">
+        <i class="icon ion-ios-sunny-outline"></i>
+        <input type="range" name="volume" min="0" max="100" value="33">
+        <i class="icon ion-ios-sunny"></i>
+      </div>
+    </div>
+
+
+
+    <div class="list">
+
+      <label class="item item-input item-select">
+        <div class="input-label">
+          Select box
+        </div>
+        <select>
+          <option>Blue</option>
+          <option>Green</option>
+          <option selected>日本語：赤</option>
+        </select>
+      </label>
+
+    </div>
+
+
+
+
+
+
+
+
+
+  </ion-content>
+</ion-view>
