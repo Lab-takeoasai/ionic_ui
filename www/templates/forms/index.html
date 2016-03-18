@@ -37,12 +37,12 @@
       <pre><code>
     &lt;div class=&quot;list&quot;&gt;
       &lt;label class=&quot;item item-input&quot;&gt;
-        &lt;span class=&quot;input-label&quot;&gt;Username&lt;/span&gt;
+        &lt;span <span style="color:red;">class=&quot;input-label&quot;</span>&gt;Username&lt;/span&gt;
         &lt;input type=&quot;text&quot;&gt;
       &lt;/label&gt;
       &lt;label class=&quot;item item-input&quot;&gt;
         &lt;span class=&quot;input-label&quot;&gt;Password&lt;/span&gt;
-        &lt;input type=&quot;password&quot;&gt;
+        &lt;input <span style="color:red;">type=&quot;password&quot;</span>&gt;
       &lt;/label&gt;
     &lt;/div&gt;</code></pre>
     </div>
@@ -59,18 +59,16 @@
       </label>
       <pre><code>
           &lt;div class=&quot;list&quot;&gt;
-            &lt;label class=&quot;item item-input item-stacked-label&quot;&gt;
-              &lt;span class=&quot;input-label&quot;&gt;Name&lt;/span&gt;
+            &lt;label class=&quot;item item-input <span style="color:red;">item-stacked-label</span>&quot;&gt;
+              &lt;span class=&quot;<span style="color:red;">input-label</span>&quot;&gt;Name&lt;/span&gt;
               &lt;input type=&quot;text&quot; placeholder=&quot;John&quot;&gt;
             &lt;/label&gt;
             &lt;label class=&quot;item item-input item-stacked-label&quot;&gt;
               &lt;span class=&quot;input-label&quot;&gt;Email&lt;/span&gt;
-              &lt;input type=&quot;email&quot; placeholder=&quot;john@suhr.com&quot;&gt;
+              &lt;input <span style="color:red;">type=&quot;email&quot;</span> placeholder=&quot;john@suhr.com&quot;&gt;
             &lt;/label&gt;
           &lt;/div&gt;</code></pre>
     </div>
-
-
 
     <div class="list">
       <label class="item item-input item-floating-label">
@@ -83,13 +81,13 @@
       </label>
       <pre><code>
           &lt;div class=&quot;list&quot;&gt;
-            &lt;label class=&quot;item item-input item-floating-label&quot;&gt;
+            &lt;label class=&quot;item item-input <span style="color:red;">item-floating-label</span>&quot;&gt;
               &lt;span class=&quot;input-label&quot;&gt;Name&lt;/span&gt;
               &lt;input type=&quot;text&quot; placeholder=&quot;First Name&quot;&gt;
             &lt;/label&gt;
             &lt;label class=&quot;item item-input item-floating-label&quot;&gt;
               &lt;span class=&quot;input-label&quot;&gt;Tel&lt;/span&gt;
-              &lt;input type=&quot;tel&quot; placeholder=&quot;Tel&quot;&gt;
+              &lt;input <span style="color:red;">type=&quot;tel&quot;</span> placeholder=&quot;Tel&quot;&gt;
             &lt;/label&gt;
           &lt;/div&gt;</code></pre>
     </div>
@@ -102,12 +100,12 @@
         <input type="number" placeholder="Number">
       </label>
       <pre><code>
-          &lt;div class=&quot;list list-inset&quot;&gt;
+          &lt;div class=&quot;list <span style="color:red;">list-inset</span>&quot;&gt;
             &lt;label class=&quot;item item-input&quot;&gt;
               &lt;input type=&quot;text&quot; placeholder=&quot;Name&quot;&gt;
             &lt;/label&gt;
             &lt;label class=&quot;item item-input&quot;&gt;
-              &lt;input type=&quot;number&quot; placeholder=&quot;Number&quot;&gt;
+              &lt;input <span style="color:red;">type=&quot;number&quot;</span> placeholder=&quot;Number&quot;&gt;
             &lt;/label&gt;
           &lt;/div&gt;</code></pre>
     </div>
@@ -122,7 +120,7 @@
       <pre><code>
           &lt;div class=&quot;list&quot;&gt;
             &lt;div class=&quot;item item-input-inset&quot;&gt;
-              &lt;label class=&quot;item-input-wrapper&quot;&gt;
+              &lt;label <span style="color:red;">class=&quot;item-input-wrapper&quot;</span>&gt;
                 &lt;input type=&quot;email&quot; placeholder=&quot;Email&quot;&gt;
               &lt;/label&gt;
               &lt;button class=&quot;button button-small&quot;&gt;Submit&lt;/button&gt;
@@ -138,41 +136,61 @@
       <pre><code>
           &lt;div class=&quot;list list-inset&quot;&gt;
             &lt;label class=&quot;item item-input&quot;&gt;
-              &lt;i class=&quot;icon ion-search placeholder-icon&quot;&gt;&lt;/i&gt;
+              &lt;i class=&quot;icon ion-search <span style="color:red;">placeholder-icon</span>&quot;&gt;&lt;/i&gt;
               &lt;input type=&quot;text&quot; placeholder=&quot;Search&quot;&gt;
             &lt;/label&gt;
           &lt;/div&gt;</code></pre>
     </div>
 
-
     <ion-list>
-      <ion-toggle ng-model="toggleValue" toggle-class="toggle-calm">Toggle {{toggleValue}}</ion-toggle>
+      <ion-toggle ng-model="toggleValue" toggle-class="toggle-calm">Toggle</ion-toggle>
       <ion-checkbox ng-model="checkbox">Checkbox</ion-checkbox>
       <ion-radio ng-model="choice" ng-value="'A'">Choose A</ion-radio>
       <ion-radio ng-model="choice" ng-value="'B'">Choose B</ion-radio>
       <ion-item class="range">
         <i class="icon ion-volume-low"></i>
-        <input type="range" ng-model="volume" min="0" max="100" value="33">
+        <input type="range" ng-model="volume" min="1" max="100">
         <i class="icon ion-volume-high"></i>
       </ion-item>
       <ion-item class="range range-positive">
         <i class="icon ion-ios-sunny-outline"></i>
-        <input type="range" ng-model="sunny" min="0" max="100" value="0">
+        <input type="range" ng-model="sunny" min="1" max="100">
         <i class="icon ion-ios-sunny"></i>
       </ion-item>
       <label class="item item-input item-select">
-        <div class="input-label">
-          Select box
-        </div>
-        <select>
+        <div class="input-label">Select box</div>
+        <select ng-model="select">
           <option>Blue</option>
           <option>Green</option>
-          <option selected>日本語：赤</option>
+          <option>日本語：赤</option>
         </select>
       </label>
+      <pre><code><cite></cite>
+          &lt;ion-list&gt;
+            &lt;<span style="color:red;">ion-toggle</span> ng-model=&quot;toggleValue&quot; <span style="color:red;">toggle-class=&quot;toggle-calm&quot;</span>&gt;Toggle&lt;/ion-toggle&gt;
+            &lt;<span style="color:red;">ion-checkbox</span> ng-model=&quot;checkbox&quot;&gt;Checkbox&lt;/ion-checkbox&gt;
+            &lt;<span style="color:red;">ion-radio</span> ng-model=&quot;choice&quot; ng-value=&quot;'A'&quot;&gt;Choose A&lt;/ion-radio&gt;
+            &lt;ion-radio ng-model=&quot;choice&quot; ng-value=&quot;'B'&quot;&gt;Choose B&lt;/ion-radio&gt;
+            &lt;ion-item <span style="color:red;">class=&quot;range&quot;</span>&gt;
+              &lt;i class=&quot;icon ion-volume-low&quot;&gt;&lt;/i&gt;
+              &lt;<span style="color:red;">input type=&quot;range&quot;</span> ng-model=&quot;volume&quot; min=&quot;1&quot; max=&quot;100&quot;&gt;
+              &lt;i class=&quot;icon ion-volume-high&quot;&gt;&lt;/i&gt;
+            &lt;/ion-item&gt;
+            &lt;ion-item class=&quot;range <span style="color:red;">range-positive</span>&quot;&gt;
+              &lt;i class=&quot;icon ion-ios-sunny-outline&quot;&gt;&lt;/i&gt;
+              &lt;input type=&quot;range&quot; ng-model=&quot;sunny&quot; min=&quot;1&quot; max=&quot;100&quot;&gt;
+              &lt;i class=&quot;icon ion-ios-sunny&quot;&gt;&lt;/i&gt;
+            &lt;/ion-item&gt;
+            &lt;label class=&quot;item item-input <span style="color:red;">item-select</span>&quot;&gt;
+              &lt;div class=&quot;input-label&quot;&gt;Select box&lt;/div&gt;
+              &lt;<span style="color:red;">select ng-model</span>=&quot;select&quot;&gt;
+                &lt;option&gt;Blue&lt;/option&gt;
+                &lt;option&gt;Green&lt;/option&gt;
+                &lt;option&gt;日本語：赤&lt;/option&gt;
+              &lt;/select&gt;
+            &lt;/label&gt;
+          &lt;/ion-list&gt;</code></pre>
     </ion-list>
-
-
 
   </ion-content>
 </ion-view>
