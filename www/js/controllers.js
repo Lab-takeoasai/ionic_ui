@@ -12,7 +12,25 @@ angular.module('starter.controllers', [])
 
 })
 
-
+.controller('ActionSheetCtrl', function($scope, $ionicActionSheet) {
+  // Triggered on a button click, or some other target
+ $scope.showActionSheet = function() {
+   // Show the action sheet
+   var hideSheet = $ionicActionSheet.show({
+     buttons: [
+       { text: '<b>Share</b> This' },
+       { text: 'Move' }
+     ],
+     destructiveText: 'Delete',
+     titleText: 'This is a test of ActionSheet',
+     cancelText: 'Cancel',
+     cancel: function() {},
+     buttonClicked: function(index) {
+       return true;
+     }
+   });
+ };
+})
 
 .controller('ActivelistsCtrl', function($scope, $ionicListDelegate) {
   var items = [];

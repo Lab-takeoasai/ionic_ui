@@ -67,4 +67,16 @@ angular.module('routes', ['ionic', 'starter.controllers'])
     }
   })
 
+  // ActionSheet
+  .state('app.actionsheet', {
+    url: '/actionsheets',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/actionsheets/index.html',
+        controller: 'ActionSheetCtrl'
+      }
+    }
+  })
+
+
 });
