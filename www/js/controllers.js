@@ -14,8 +14,22 @@ angular.module('starter.controllers', [])
 
 // more performance list
 // http://ionicframework.com/docs/api/directive/collectionRepeat/
-.controller('ActionViewCtrl', function($scope, $ionicActionSheet, $ionicBackdrop, $timeout, $ionicModal) {
+.controller('ActionViewCtrl', function($scope, $ionicActionSheet, $ionicBackdrop, $timeout, $ionicModal, $ionicPopover) {
 
+  // Popover View
+  $ionicPopover.fromTemplateUrl('../templates/actionviews/popover.html', {
+    scope: $scope
+  }).then(function(popover) {
+    $scope.popover = popover;
+  });
+  $scope.showPopover = function($event) {
+    $scope.popover.show($event);
+  };
+  $scope.closePopover = function() {
+    $scope.popover.hide();
+  };
+
+  // Modal View
   $ionicModal.fromTemplateUrl('../templates/actionviews/modal.html', {
     scope: $scope,
     animation: 'slide-in-up'
@@ -23,13 +37,13 @@ angular.module('starter.controllers', [])
     $scope.modal = modal;
   });
   $scope.showModal = function() {
-    console.log("modal");
     $scope.modal.show();
   };
   $scope.closeModal = function() {
     $scope.modal.hide();
   };
 
+  // Refresh & backDrop
   $scope.doRefresh = function() {
     $ionicBackdrop.retain();
     $timeout(function() {
@@ -38,8 +52,8 @@ angular.module('starter.controllers', [])
     $scope.$broadcast('scroll.refreshComplete'); // stop spinning
   };
 
+  // ActionSheet
   $scope.showActionSheet = function() {
-    // Show the action sheet
     var hideSheet = $ionicActionSheet.show({
       buttons: [
         { text: '<b>Share</b> This' },
