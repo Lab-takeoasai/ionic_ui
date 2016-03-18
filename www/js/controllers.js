@@ -12,24 +12,48 @@ angular.module('starter.controllers', [])
 
 })
 
-.controller('ActionSheetCtrl', function($scope, $ionicActionSheet) {
-  // Triggered on a button click, or some other target
- $scope.showActionSheet = function() {
-   // Show the action sheet
-   var hideSheet = $ionicActionSheet.show({
-     buttons: [
-       { text: '<b>Share</b> This' },
-       { text: 'Move' }
-     ],
-     destructiveText: 'Delete',
-     titleText: 'This is a test of ActionSheet',
-     cancelText: 'Cancel',
-     cancel: function() {},
-     buttonClicked: function(index) {
-       return true;
-     }
-   });
- };
+// more performance list
+// http://ionicframework.com/docs/api/directive/collectionRepeat/
+.controller('ActionViewCtrl', function($scope, $ionicActionSheet, $ionicBackdrop, $timeout, $ionicModal) {
+
+  $ionicModal.fromTemplateUrl('../templates/actionviews/modal.html', {
+    scope: $scope,
+    animation: 'slide-in-up'
+  }).then(function(modal) {
+    $scope.modal = modal;
+  });
+  $scope.showModal = function() {
+    console.log("modal");
+    $scope.modal.show();
+  };
+  $scope.closeModal = function() {
+    $scope.modal.hide();
+  };
+
+  $scope.doRefresh = function() {
+    $ionicBackdrop.retain();
+    $timeout(function() {
+      $ionicBackdrop.release();
+    }, 1000);
+    $scope.$broadcast('scroll.refreshComplete'); // stop spinning
+  };
+
+  $scope.showActionSheet = function() {
+    // Show the action sheet
+    var hideSheet = $ionicActionSheet.show({
+      buttons: [
+        { text: '<b>Share</b> This' },
+        { text: 'Move' }
+      ],
+      destructiveText: 'Delete',
+      titleText: 'This is a test of ActionSheet',
+      cancelText: 'Cancel',
+      cancel: function() {},
+      buttonClicked: function(index) {
+        return true;
+      }
+    });
+  };
 })
 
 .controller('ActivelistsCtrl', function($scope, $ionicListDelegate) {

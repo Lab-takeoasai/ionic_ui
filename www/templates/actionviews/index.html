@@ -1,0 +1,17 @@
+<ion-view view-title="Action Views">
+  <ion-content>
+    <ion-refresher
+    pulling-text="Pull to refresh..."
+    on-refresh="doRefresh()">
+  </ion-refresher>
+
+    <button class="button button-positive" ng-click="showActionSheet()">
+      Show ActionSheet
+    </button>
+
+    <button class="button button-calm" ng-click="showModal()">
+      Show Modal
+    </button>
+
+  </ion-content>
+</ion-view>

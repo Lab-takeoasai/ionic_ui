@@ -67,13 +67,13 @@ angular.module('routes', ['ionic', 'starter.controllers'])
     }
   })
 
-  // ActionSheet
-  .state('app.actionsheet', {
-    url: '/actionsheets',
+  // ActionView
+  .state('app.actionviews', {
+    url: '/actionviews',
     views: {
       'menuContent': {
-        templateUrl: 'templates/actionsheets/index.html',
-        controller: 'ActionSheetCtrl'
+        templateUrl: 'templates/actionviews/index.html',
+        controller: 'ActionViewCtrl'
       }
     }
   })
