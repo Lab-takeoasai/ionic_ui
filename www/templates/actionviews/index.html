@@ -1,9 +1,7 @@
 <ion-view view-title="Action Views">
   <ion-content>
-    <ion-refresher
-    pulling-text="Pull to refresh..."
-    on-refresh="doRefresh()">
-  </ion-refresher>
+    <ion-refresher pulling-text="Pull to refresh..." on-refresh="doRefresh()">
+    </ion-refresher>
 
     <button class="button button-positive" ng-click="showActionSheet()">
       Show ActionSheet
@@ -15,6 +13,18 @@
 
     <button class="button button-royal" ng-click="showPopover($event)">
       Show Popover
+    </button>
+
+    <button class="button button-assertive" ng-click="showAlert()">
+      Show Alert
+    </button>
+
+    <button class="button" ng-click="showConfirm()">
+      Show Confirm
+    </button>
+
+    <button class="button" ng-click="showPopup()">
+      Show Popup
     </button>
 
   </ion-content>
