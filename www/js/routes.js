@@ -78,5 +78,15 @@ angular.module('routes', ['ionic', 'starter.controllers'])
     }
   })
 
+  // Scroll
+  .state('app.scrolls', {
+    url: '/scrolls',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/scrolls/index.html'
+      }
+    }
+  })
+
 
 });
